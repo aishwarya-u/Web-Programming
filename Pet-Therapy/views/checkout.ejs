@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			<% for (var i = 0; i < foundCheckOut.item.length; i++) { %>
+				<div class="list-group">	
+					<span class="list-group-item">	
+						<div class="row">
+							<div class="col-md-3">
+								<span><img src="<%= foundCheckOut.items[i].image %>" class="Dog-image"></span>
+							</div>
+							<div class="col-md-6">
+								<p><%= foundCheckOut.item[i].name %></p>
+							</div>
+							<div class="col-md-3">
+								<p><%= foundCheckOut.item[i].cost %></p>
+								<p><%= foundCheckOut.item[i].dog_id %></p>
+								<form method="post" action="/remove">
+									<input type="hidden" name="dog_id" value="<%= foundCheckOut.item[i].dog_id %>">
+									<input type="hidden" name="item" value="<%= foundCheckOut.items[i].price %>">
+									<button type="submit" class="btn btn-danger">Remove</button>
+								</form>
+							</div>
+						</div>
+					</span>
+				</div>
+			<% } %>
+		</div>
+		<div>
+			
+		</div>
+		<div>
+			
+		</div>
+	</div>
+</div>

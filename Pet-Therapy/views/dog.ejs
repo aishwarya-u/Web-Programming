@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<img src="<%= dog.image %>">
+		</div>	
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<h2><%= dog.name %></h2>
+			<h3><%= dog.price %></h3>
+				<div class="form-group">
+					<input type="hidden" name="dog_id" id="quantity" value="<%= dog._id %>">
+					<input type="hidden" name="priceHidden" id="priceHidden" class="form-control" value="<%= dog.price %>">
+					<input type="hidden" name="nameHidden" id="nameHidden" class="form-control" value="<%= dog.name %>">
+					<input type="hidden" name="imageHidden" id="imageHidden" class="form-control" value="<%= dog.image %>">
+					<input type="text" name="item" class="form-control" value="<%= dog.name %>">
+					<input type="text" name="priceValue" id="priceValue" class="form-control" value="<%= dog.price %>">
+				</div>
+				<% if (user) { %>
+					<button type="submit"  class="btn btn-primary btn-lg">Go to CheckOut</button>
+				<% } else { %>
+					<a href="/signup" class="btn btn-warning btn-lg">Signup</a>
+				<% } %>
+			</form>
+		</div>
+	</div>
+</div>
+
+

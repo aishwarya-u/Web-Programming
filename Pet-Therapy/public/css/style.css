@@ -1,0 +1,10 @@
+body{
+	padding-top: 120px;
+	font-family: 'Montserrat';
+	height: 100 px;
+	align-self: auto;
+}
+
+.dog-image{
+	width: 60%;
+}
